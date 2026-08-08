@@ -250,14 +250,14 @@ document.querySelectorAll('video').forEach(video => {
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('video').forEach(video => {
         
-        // प्ले होने पर Play (▶) बटन छुपाना
+        // Hide Play (▶) while playing
         video.addEventListener('play', () => {
             if(video.parentElement.classList.contains('custom-video-box')) {
                 video.parentElement.classList.add('is-playing');
             }
         });
 
-        // पॉज़ होने पर Play (▶) बटन वापस लाना
+        // Return Play (▶) button when pause 
         video.addEventListener('pause', () => {
             if(video.parentElement.classList.contains('custom-video-box')) {
                 video.parentElement.classList.remove('is-playing');
